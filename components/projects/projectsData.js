@@ -1,42 +1,56 @@
 const projects = [
   {
+    id: "01",
     title: "AI Travel Planner",
-    subtitle: "Plan trips with AI assistance",
+    subtitle: "Full Stack Application",
+
     description:
-      "A full-stack travel planning platform that generates personalized itineraries, manages destinations, and provides a seamless travel experience.",
+      "An AI-powered travel planner...",
+
+    image: "/projects/travel.png",
+
+    features: [
+      "AI itinerary generation",
+      "Authentication",
+      "Interactive maps",
+      "Responsive UI",
+    ],
 
     tech: [
       "Next.js",
       "Node.js",
       "MongoDB",
-      "OpenAI API",
+      "OpenAI",
     ],
 
-    image: "/projects/travel.png",
-
     github: "#",
-
     live: "#",
   },
 
   {
+    id: "02",
     title: "Portfolio Website",
 
-    subtitle: "Apple-inspired interactive portfolio",
+    subtitle: "Personal Website",
 
     description:
-      "A premium portfolio experience featuring cinematic scrolling, interactive 3D effects, and storytelling-inspired UI.",
+      "Apple inspired portfolio.",
+
+    image: "/projects/portfolio.png",
+
+    features: [
+      "Interactive Hero",
+      "3D Portrait",
+      "Responsive",
+    ],
 
     tech: [
       "Next.js",
       "Framer Motion",
-      "TailwindCSS",
+      "Tailwind",
     ],
 
-    image: "/projects/portfolio.png",
-
     github: "#",
-
     live: "#",
   },
 ];

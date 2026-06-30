@@ -15,16 +15,15 @@ export default function FeaturedBuilds() {
         description="A selection of projects that reflect how I approach engineering, design, and problem-solving."
       />
 
-      <div className="mt-24 space-y-16">
-
-        {projects.map((project) => (
-          <ProjectShowcase
-            key={project.title}
-            {...project}
-          />
-        ))}
-
-      </div>
+      <div className="mt-24 space-y-32">
+        {projects.map((project, index) => (
+         <ProjectShowcase
+          key={project.title}
+              {...project}
+             reverse={index % 2 === 1}
+           />
+          ))}
+       </div>
 
     </Section>
   );

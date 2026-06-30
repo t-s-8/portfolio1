@@ -11,11 +11,11 @@ export default function Journey() {
 
       <SectionTitle
         eyebrow="ENGINEERING JOURNEY"
-        title="Learning never stops."
-        description="Every year added another layer to my journey as a developer."
+        title="Always Learning."
+        description="Every milestone reflects growth, curiosity, and the drive to build better software."
       />
 
-      <div className="mt-24">
+      <div className="mt-20">
 
         {journey.map((item) => (
           <TimelineItem

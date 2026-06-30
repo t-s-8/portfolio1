@@ -9,40 +9,49 @@ export default function ProjectShowcase({
   title,
   subtitle,
   description,
+  features,
   tech,
   image,
   github,
   live,
+  reverse,
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: .7 }}
+      transition={{ duration: 0.7 }}
     >
       <GlassCard className="overflow-hidden">
 
-        <div className="grid lg:grid-cols-2">
+        <div
+          className={`grid items-center gap-12 lg:grid-cols-2 ${
+            reverse ? "lg:[&>*:first-child]:order-2" : ""
+          }`}
+        >
+          {/* Image */}
 
-          <div className="relative aspect-video lg:aspect-auto min-h-[450px]">
+          <div className="relative min-h-[500px] overflow-hidden">
 
             <Image
               src={image}
               alt={title}
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-700 hover:scale-105"
             />
 
           </div>
 
-          <div className="flex flex-col justify-center p-12">
+          {/* Content */}
 
-            <p className="text-blue-400 uppercase tracking-[0.35em] text-xs">
+          <div className="flex flex-col justify-center p-10 lg:p-14">
+
+            <p className="text-xs uppercase tracking-[0.4em] text-blue-400">
               {subtitle}
             </p>
 
-            <h3 className="mt-4 text-5xl font-bold">
+            <h3 className="mt-5 text-5xl font-bold leading-tight lg:text-7xl">
               {title}
             </h3>
 
@@ -50,12 +59,31 @@ export default function ProjectShowcase({
               {description}
             </p>
 
+            {/* Features */}
+
+            <div className="mt-10 space-y-4">
+
+              {features?.map((feature) => (
+                <div
+                  key={feature}
+                  className="flex items-center gap-3 text-zinc-300"
+                >
+                  <span className="h-2 w-2 rounded-full bg-blue-400" />
+
+                  <span>{feature}</span>
+                </div>
+              ))}
+
+            </div>
+
+            {/* Tech Stack */}
+
             <div className="mt-10 flex flex-wrap gap-3">
 
               {tech.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/10 px-4 py-2 text-sm"
+                  className="rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300"
                 >
                   {item}
                 </span>
@@ -63,12 +91,12 @@ export default function ProjectShowcase({
 
             </div>
 
-            <div className="mt-10 flex gap-4">
+            {/* Buttons */}
 
-              <Button
-                href={live}
-              >
-                Live Demo
+            <div className="mt-12 flex flex-wrap gap-4">
+
+              <Button href={live}>
+                Live Demo →
               </Button>
 
               <Button
@@ -81,7 +109,6 @@ export default function ProjectShowcase({
             </div>
 
           </div>
-
         </div>
 
       </GlassCard>

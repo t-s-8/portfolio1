@@ -2,12 +2,12 @@ const journey = [
   {
     year: "2025",
     title: "Started Computer Science",
-    description: "Joined Manipal University Jaipur."
+    description: "Began my Computer Science journey at Manipal University Jaipur."
   },
   {
     year: "2026",
-    title: "Learning",
-    description: "Learning and building projects."
+    title: "Started learning development ",
+    description: "Deep dive into development and fundamentals of Data Structures"
   },
   {
     year: "2027",
@@ -16,7 +16,7 @@ const journey = [
   },
   {
     year: "2028",
-    title: "Building AI Products",
+    title: "Building Products",
     description: "Creating projects with AI and interactive experiences."
   }
 ];

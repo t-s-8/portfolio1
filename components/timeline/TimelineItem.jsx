@@ -9,25 +9,33 @@ export default function TimelineItem({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="relative border-l border-blue-500/30 pl-8 pb-14"
+      transition={{ duration: 0.6 }}
+      className="border-b border-white/10 py-12"
     >
-      <div className="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-blue-400" />
+      <div className="grid gap-8 lg:grid-cols-[180px_1fr]">
 
-      <p className="text-blue-400 text-sm uppercase tracking-[0.4em]">
-        {year}
-      </p>
+        <div>
+          <p className="text-sm uppercase tracking-[0.4em] text-blue-400">
+            {year}
+          </p>
+        </div>
 
-      <h3 className="mt-3 text-3xl font-semibold">
-        {title}
-      </h3>
+        <div>
 
-      <p className="mt-4 max-w-xl leading-8 text-zinc-400">
-        {description}
-      </p>
+          <h3 className="text-3xl font-semibold text-white">
+            {title}
+          </h3>
+
+          <p className="mt-5 max-w-2xl leading-8 text-zinc-400">
+            {description}
+          </p>
+
+        </div>
+
+      </div>
     </motion.div>
   );
 }
