@@ -13,7 +13,7 @@ export default function Hero() {
       <BackgroundGlow />
 
       {/* Hero Content */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-20 px-8 pt-28 lg:flex-row lg:justify-between lg:px-12">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-20 px-8 pt-28 lg:flex-row lg:justify-center lg:gap-28 lg:px-12">
 
         {/* Left */}
         <HeroText />
