@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Story() {
   return (
     <section
-      id="about"
+      id="story"
       className="relative flex min-h-screen items-center bg-black"
     >
       <div className="mx-auto max-w-7xl px-8">
