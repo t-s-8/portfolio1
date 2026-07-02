@@ -6,36 +6,77 @@ export default function TimelineItem({
   year,
   title,
   description,
+  isLast,
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="border-b border-white/10 py-12"
+      initial={{
+        opacity: 0,
+        x: -40,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        duration: 0.7,
+      }}
+      className="relative flex gap-10"
     >
-      <div className="grid gap-8 lg:grid-cols-[180px_1fr]">
+      {/* Timeline */}
 
-        <div>
-          <p className="text-sm uppercase tracking-[0.4em] text-blue-400">
-            {year}
-          </p>
-        </div>
+      <div className="flex flex-col items-center">
 
-        <div>
+        {/* Dot */}
 
-          <h3 className="text-3xl font-semibold text-white">
-            {title}
-          </h3>
+        <div className="relative">
 
-          <p className="mt-5 max-w-2xl leading-8 text-zinc-400">
-            {description}
-          </p>
+          <div className="absolute inset-0 rounded-full bg-blue-500 blur-lg opacity-70" />
+
+          <div className="relative h-5 w-5 rounded-full border-4 border-blue-500 bg-black" />
 
         </div>
+
+        {/* Line */}
+
+        {!isLast && (
+          <div className="mt-3 h-full w-px bg-gradient-to-b from-blue-500 via-blue-400/40 to-transparent" />
+        )}
 
       </div>
+
+      {/* Card */}
+
+      <motion.div
+        whileHover={{
+          y: -6,
+        }}
+        className="
+          mb-16
+          w-full
+          rounded-3xl
+          border
+          border-white/10
+          bg-white/[0.03]
+          p-8
+          backdrop-blur-xl
+          transition
+        "
+      >
+        <p className="text-sm font-semibold tracking-[0.35em] text-blue-400">
+          {year}
+        </p>
+
+        <h3 className="mt-4 text-3xl font-semibold text-white">
+          {title}
+        </h3>
+
+        <p className="mt-5 leading-8 text-zinc-400">
+          {description}
+        </p>
+
+      </motion.div>
     </motion.div>
   );
 }

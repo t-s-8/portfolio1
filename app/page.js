@@ -1,32 +1,40 @@
-import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/hero/Hero";
-import Story from "@/components/story/Story";
+import Story from "@/components/about/About";
 import Specifications from "@/components/specs/Specifications";
 import FeaturedBuilds from "@/components/projects/FeaturedBuilds";
 import Journey from "@/components/timeline/Journey";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/layout/Footer";
 
+import FadeInSection from "@/components/shared/FadeInSection";
+import About from "@/components/about/About";
+
 export default function Home() {
   return (
-    <main className="bg-black text-white">
-
-      <Navbar />
-
+    <>
       <Hero />
 
-      <Story />
+      <FadeInSection>
+        <About />
+      </FadeInSection>
 
-      <Specifications />
+      <FadeInSection>
+        <Specifications />
+      </FadeInSection>
 
-      <FeaturedBuilds />
+      <FadeInSection>
+        <FeaturedBuilds />
+      </FadeInSection>
 
-      <Journey />
+      <FadeInSection>
+        <Journey />
+      </FadeInSection>
 
-      <Contact />
+      <FadeInSection>
+        <Contact />
+      </FadeInSection>
 
       <Footer />
-
-    </main>
+    </>
   );
 }

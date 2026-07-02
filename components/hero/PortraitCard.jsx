@@ -112,7 +112,7 @@ export default function PortraitCard() {
         {/* Glow */}
 
         <motion.div
-          className="absolute -inset-8 rounded-[50px] bg-blue-500/20 blur-[90px]"
+          className="absolute -inset-8 rounded-[50px] bg-gradient-to-r from-blue-500/20 via-cyan-500/10 to-violet-500/20 blur-[90px]"
           style={{
             x: smoothRotateY,
             y: smoothRotateX,
@@ -159,7 +159,7 @@ export default function PortraitCard() {
           <div className="absolute bottom-8 left-8">
 
             <p className="text-xs uppercase tracking-[0.45em] text-blue-400">
-              AVAILABLE
+              OPEN TO WORK
             </p>
 
             <h2 className="mt-2 text-3xl font-semibold text-white">

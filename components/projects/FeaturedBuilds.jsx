@@ -3,7 +3,7 @@
 import Section from "../ui/Section";
 import SectionTitle from "../ui/SectionTitle";
 import ProjectShowcase from "./ProjectShowcase";
-import projects from "./projectsData";
+import projects from "../../data/projects";
 
 export default function FeaturedBuilds() {
   return (

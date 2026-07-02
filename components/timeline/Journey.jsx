@@ -8,23 +8,23 @@ import journey from "./journeyData";
 export default function Journey() {
   return (
     <Section id="journey">
+        <div className="absolute left-1/2 top-40 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/5 blur-[150px]" />
 
       <SectionTitle
-        eyebrow="ENGINEERING JOURNEY"
-        title="Always Learning."
-        description="Every milestone reflects growth, curiosity, and the drive to build better software."
+        eyebrow="MY JOURNEY"
+        title="Building one project at a time."
+       description="Every project, challenge and milestone has helped shape the developer I'm becoming."
       />
 
-      <div className="mt-20">
-
-        {journey.map((item) => (
-          <TimelineItem
-            key={item.year}
-            {...item}
-          />
-        ))}
-
-      </div>
+      <div className="mx-auto mt-24 max-w-4xl">
+      {journey.map((item, index) => (
+        <TimelineItem
+         key={item.year + item.title}
+          {...item}
+           isLast={index === journey.length - 1}
+       />
+       ))}
+         </div>
 
     </Section>
   );

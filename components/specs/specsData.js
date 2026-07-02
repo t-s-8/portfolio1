@@ -1,42 +1,19 @@
 const specs = [
   {
     title: "Frontend",
-    description: "Building modern user interfaces",
-    items: [
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
+    items: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "HTML5", "CSS3"],
   },
   {
     title: "Backend",
-    description: "Creating scalable APIs",
-    items: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "REST APIs",
-    ],
+    items: ["Node.js", "Express.js", "MongoDB", "REST APIs"],
   },
   {
     title: "Languages",
-    description: "Core programming knowledge",
-    items: [
-      "JavaScript",
-      "Java",
-      "C++",
-    ],
+    items: ["JavaScript", "C++"],
   },
   {
     title: "Tools",
-    description: "Daily workflow",
-    items: [
-      "Git",
-      "GitHub",
-      "VS Code",
-      "Postman",
-    ],
+    items: ["AI", "GitHub", "VS Code", "Postman"],
   },
 ];
 
